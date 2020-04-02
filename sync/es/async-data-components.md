@@ -1,9 +1,9 @@
 ---
-title: Async data in components?
-description: Async data in NuxtJS components?
+title: ¿Datos asíncronos en componentes?
+description: ¿Datos asíncronos en componentes NuxtJS?
 ---
 
-Because components do not have an `asyncData` method, you cannot directly fetch async data server side within a component. In order to get around this limitation you have two basic options:
+Debido a que los componentes no tienen un método `asyncData` , no puede buscar directamente el lado del servidor de datos asíncrono dentro de un componente. Para evitar esta limitación, tiene dos opciones básicas:
 
-1. Make the API call in the `mounted` hook and set data properties when loaded. *Downside: Won't work for server side rendering.*
-2. Make the API call in the `asyncData` or `fetch` methods of the page component and pass the data as props to the sub components. Server rendering will work fine. *Downside: the `asyncData` or `fetch` of the page might be less readable because it's loading the data for other components*.
+1. Realice la llamada API en el gancho `mounted` y establezca las propiedades de los datos cuando se cargue. *Desventaja: no funcionará para la representación del lado del servidor.*
+2. Realizar la llamada API en el `asyncData` o `fetch` métodos del componente página y pasar los datos como apoyos a los subcomponentes. La representación del servidor funcionará bien. *Desventaja: el `asyncData` o la `fetch` de la página pueden ser menos legibles porque está cargando los datos para otros componentes* .
